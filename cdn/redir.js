@@ -1,7 +1,7 @@
 function redirect(urltext) {
     const url = new URL(urltext);
     if (url.hostname == "discord.com" || url.hostname == "discord.gg") { return window.open(urltext, "_blank"); }
-    if (url.hostname == "shitval.top" || url.hostname == "www.shitval.top") { return window.open(urltext, "_self"); }
+    if (url.hostname == "https://shitval.github.io/main" || url.hostname == "https://shitval.github.io/main") { return window.open(urltext, "_self"); }
     
     Swal.fire({
         title: "Hold on!",
@@ -14,7 +14,7 @@ function redirect(urltext) {
         denyButtonColor: "#7066e0",
         
         confirmButtonText: "Redirect me to " + url.hostname,
-        denyButtonText: "Stay on shitval.top"
+        denyButtonText: "https://shitval.github.io/main"
     }).then((result) => {
       if (result.isConfirmed) {
           window.open(urltext, "_blank")
